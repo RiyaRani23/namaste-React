@@ -60,9 +60,9 @@ JSX is internally converted into `React.createElement()`.
 ## Syntax
 ```js
 React.createElement(type, props, children)
-## `React.createElement()` Arguments
+ `React.createElement()` Arguments
 
-### 1️⃣ `type`
+ 1️⃣ `type`
 Defines **what element to create**
 
 Can be:
