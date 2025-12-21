@@ -52,13 +52,11 @@ The react package contains `React.createElement()`, `React.Component`, `React.Ch
 A: `Development` is the stage of an application before it's made public while `production` is the term used for the same application when it's made `public`.
 `Development build` is several times (maybe 3-5x) `slower` than the `production build`.
 
-## `React.createElement()` 
+## About `React.createElement()` 
 
 In React, `React.createElement()` is used to create a **React element (object)**.
 JSX is internally converted into `React.createElement()`.
----
-## Syntax
-```js
+
 React.createElement(type, props, children)
  `React.createElement()` Arguments
 
@@ -100,12 +98,9 @@ React.createElement(
   "Hello React"
 )
 
-```js
-React.createElement("h1")
-
-type     → what to create
-props    → how it behaves / looks
-children → what it contains
+## type     → what to create
+## props    → how it behaves / looks
+## children → what it contains
 
 
 
