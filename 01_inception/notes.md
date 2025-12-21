@@ -52,6 +52,63 @@ The react package contains `React.createElement()`, `React.Component`, `React.Ch
 A: `Development` is the stage of an application before it's made public while `production` is the term used for the same application when it's made `public`.
 `Development build` is several times (maybe 3-5x) `slower` than the `production build`.
 
+## `React.createElement()` 
+
+In React, `React.createElement()` is used to create a **React element (object)**.
+JSX is internally converted into `React.createElement()`.
+---
+## Syntax
+```js
+React.createElement(type, props, children)
+## `React.createElement()` Arguments
+
+### 1️⃣ `type`
+Defines **what element to create**
+
+Can be:
+- HTML tag → `"div"`, `"h1"`, `"p"`
+- React Component → `App`, `Header`
+
+`2️⃣ props`
+
+An object that holds attributes, events, styles, etc.
+
+If no props are required → pass null
+
+React.createElement(
+  "h1",
+  { className: "title", id: "heading" }
+)
+
+`3️⃣ children`
+
+The content inside the element can be:
+
+Text
+
+Another React element
+
+Multiple children
+
+---
+## Syntax
+```js
+
+React.createElement(
+  "h1",
+  null,
+  "Hello React"
+)
+
+```js
+React.createElement("h1")
+
+type     → what to create
+props    → how it behaves / looks
+children → what it contains
+
+
+
 
 ## Q: What is `async and defer`?
 A: `Async` - The async attribute is a `boolean attribute`. The script is downloaded in `parallel(in the background)` to parsing the page, and `executed as soon` as it is available (do not block HTML DOM construction during downloading process) and don’t wait for anything.
