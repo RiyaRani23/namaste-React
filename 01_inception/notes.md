@@ -57,8 +57,7 @@ A: `Development` is the stage of an application before it's made public while `p
 In React, `React.createElement()` is used to create a **React element (object)**.
 JSX is internally converted into `React.createElement()`.
 
-React.createElement(type, props, children)
- `React.createElement()` Arguments
+`React.createElement(type, props, children)`
 
  1️⃣ `type`
 Defines **what element to create**
@@ -97,6 +96,7 @@ React.createElement(
   null,
   "Hello React"
 )
+```
 
 ## type     → what to create
 ## props    → how it behaves / looks
