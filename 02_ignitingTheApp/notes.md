@@ -118,3 +118,90 @@ React apps depend on many external packages like:
 One-line interview answer 🎯
 
 `npm is a package manager used in React to install, manage, and run project dependencies.`
+
+| Feature             | package.json           | package-lock.json |
+| ------------------- | ---------------------- | ----------------- |
+| Created by          | Developer              | npm automatically |
+| Purpose             | Project configuration  | Version locking   |
+| Versions            | Approximate (`^`, `~`) | Exact versions    |
+| Editable            | Yes                    | No (recommended)  |
+| Ensures consistency | ❌                      | ✅                 |
+| Used in install     | Reference              | Final authority   |
+
+### Q3: What happens if package-lock.json is deleted?
+
+ npm regenerates it, but versions may change.
+
+**One-line difference**
+
+`package.json defines dependencies, while package-lock.json locks exact dependency versions.`
+
+## Q4: What is Yarn?
+
+Yarn is a JavaScript package manager, just like npm, used to install, manage, and run dependencies in React and other JavaScript projects.
+`Yarn was created by Facebook (Meta) to fix performance and consistency issues in early npm versions.`
+
+**Yarn vs npm (quick comparison)**
+| Feature       | npm               | Yarn                          |
+| ------------- | ----------------- | ----------------------------- |
+| Creator       | npm               | Facebook                      |
+| Lock file     | package-lock.json | yarn.lock                     |
+| Speed         | Good              | Faster (especially older npm) |
+| Determinism   | Medium            | Very strong                   |
+| Offline cache | Limited           | Excellent                     |
+
+
+## Q5: dependencies vs devDependencies
+`1️⃣ dependencies`
+- Required to run the app in production
+- Libraries your app needs at runtime
+- Installed in production build
+- Used by end users
+
+Examples
+
+- react
+- react-dom
+- axios
+- redux
+
+```js 
+"dependencies": {
+  "react": "^18.2.0",
+  "react-dom": "^18.2.0"
+}
+```
+`2️⃣ devDependencies`
+
+- Required only during development
+- Tools used for building, testing, linting
+- NOT required in production
+- Removed in production builds
+
+Examples
+
+- vite
+- webpack
+```js
+"devDependencies": {
+  "vite": "^5.0.0",
+  "eslint": "^8.0.0"
+}
+```
+| Feature               | dependencies | devDependencies |
+| --------------------- | ------------ | --------------- |
+| Needed in production  | ✅ Yes        | ❌ No            |
+| Needed in development | ✅ Yes        | ✅ Yes           |
+| Used by end user      | ✅            | ❌               |
+| Size impact on build  | Yes          | No              |
+| Example               | React        | Vite            |
+
+Q: `Where does React go?`
+A: `dependencies`
+
+Q: `Where does Vite/Webpack go?`
+A: `devDependencies`
+
+One-line difference (exam ready)
+
+`dependencies are required to run the app, while devDependencies are required only during development.`
