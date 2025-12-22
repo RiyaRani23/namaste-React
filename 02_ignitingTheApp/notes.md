@@ -93,3 +93,28 @@ React apps depend on many external packages like:
 | No bundler           | Bundlers like Vite   |
 | No JSX support       | JSX works            |
 | Not scalable         | Production ready     |
+
+#### Important files created by npm
+`📄 package.json`
+
+- Project info
+- Dependencies
+- Scripts
+
+`📄 package-lock.json`
+
+- Exact versions of packages
+
+`📁 node_modules`
+
+- Installed libraries
+
+#### npm vs CDN (short)
+
+`CDN → Simple demo apps`
+
+`npm → Real-world React projects`
+
+One-line interview answer 🎯
+
+`npm is a package manager used in React to install, manage, and run project dependencies.`
