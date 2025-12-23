@@ -1,1 +1,0 @@
-{"mappings":"AACA;;;;;;;AAOA","sources":["index.css"],"sourcesContent":["\r\n#container{\r\n    text-align: center;\r\n    margin-top: 50px;\r\n    color: white;\r\n    background-color: burlywood;\r\n}\r\n\r\n*{\r\n    background-color: black;\r\n}"],"names":[],"version":3,"file":"02_ignitingTheApp.9e4c6fd2.css.map","sourceRoot":"/__parcel_source_root/"}
