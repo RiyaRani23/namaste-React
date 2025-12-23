@@ -231,7 +231,7 @@ Important interview one-liner 🎯
 `npx is a tool that runs npm packages without installing them globally.`
 
 ## Q7: What is HMR?
-A: `Hot Module Reloading (HMR) is a development feature that lets you see code changes instantly in the browser without a full page reload.` Parcel uses file watcher algorithm (C++) for HMR.
+A: `Hot Module Replacement (HMR) is a development feature that lets you see code changes instantly in the browser without a full page reload.` Parcel uses file watcher algorithm (C++) for HMR.
 `👉 HMR updates only the changed module (file) while the app is running, keeping the app state intact.
 `
 **Why HMR is useful?**
@@ -343,4 +343,23 @@ npx parcel build index.html
 | Can be deployed    | Should NOT be deployed   |
 | Clean, optimized   | Internal, messy          |
 
-## 
+## Q10: What is Browserslist?
+a: Browserslist is a configuration that tells build tools which browsers your app should support.
+
+`👉 Based on this list, tools decide how much to transpile JavaScript and add CSS prefixes.`
+
+**Simple definition**
+
+`Browserslist = target browsers list for compatibility`
+
+**Why Browserslist is needed**
+
+Different browsers support different features.
+
+Example:
+- Modern browsers → support ES6
+- Old browsers → need transpilation (ES5) + polyfills
+
+Browserslist answers:
+
+`“Which browsers should my app work on?”`
