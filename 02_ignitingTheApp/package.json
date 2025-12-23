@@ -1,0 +1,30 @@
+{
+  "name": "02_ignitingtheapp",
+  "version": "1.0.0",
+  "description": "Hello",
+
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RiyaRani23/namaste-React.git"
+  },
+  "keywords": [
+    "react",
+    "namasteReact"
+  ],
+  "author": "Riya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RiyaRani23/namaste-React/issues"
+  },
+  "homepage": "https://github.com/RiyaRani23/namaste-React#readme",
+  "devDependencies": {
+    "parcel": "^2.16.3"
+  },
+  "dependencies": {
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3"
+  }
+}

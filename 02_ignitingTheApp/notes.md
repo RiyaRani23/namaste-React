@@ -205,3 +205,27 @@ A: `devDependencies`
 One-line difference (exam ready)
 
 `dependencies are required to run the app, while devDependencies are required only during development.`
+
+## Q6: What is npx?
+
+npx is a package runner that comes with npm (v5.2+).It allows you to run a package without installing it globally.
+
+`In React, npx is commonly used to create or run tools instantly.`
+
+#### What npx does
+
+- Checks if package exists locally
+- If not, downloads it temporarily
+- Runs it
+- Deletes it after execution
+
+| Feature        | npm                 | npx                    |
+| -------------- | ------------------- | ---------------------- |
+| Purpose        | Install packages    | Run packages           |
+| Global install | Required            | Not required           |
+| Temporary use  | ❌                   | ✅                      |
+| Example        | `npm install react` | `npx create-react-app` |
+
+Important interview one-liner 🎯
+
+`npx is a tool that runs npm packages without installing them globally.`
