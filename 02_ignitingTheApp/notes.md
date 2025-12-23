@@ -342,3 +342,5 @@ npx parcel build index.html
 | Used in production | Used only in development |
 | Can be deployed    | Should NOT be deployed   |
 | Clean, optimized   | Internal, messy          |
+
+## 

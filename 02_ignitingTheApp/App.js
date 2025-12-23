@@ -8,6 +8,12 @@
 * Super Fast Build Algorithm
 * Image Optimization
 * Caching while development
+* compression 
+* Compatible with older version of browsers (polyfills)
+* HTTPS on dev
+* manage port Number
+* consistent hashing algorithm
+* Zero Configuration
 */ 
 
 
