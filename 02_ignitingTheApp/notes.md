@@ -229,3 +229,116 @@ npx is a package runner that comes with npm (v5.2+).It allows you to run a packa
 Important interview one-liner 🎯
 
 `npx is a tool that runs npm packages without installing them globally.`
+
+## Q7: What is HMR?
+A: `Hot Module Reloading (HMR) is a development feature that lets you see code changes instantly in the browser without a full page reload.` Parcel uses file watcher algorithm (C++) for HMR.
+`👉 HMR updates only the changed module (file) while the app is running, keeping the app state intact.
+`
+**Why HMR is useful?**
+
+### Without HMR:
+- You change code
+- Save the file
+- Browser reloads completely
+- App state is lost (form data, counters, etc.)
+
+### With HMR:
+- You change code
+- Save the file
+- Only that part updates
+- State stays the same ✅
+
+### How HMR works (behind the scenes)
+- Dev server watches file changes
+- Changed module is rebuilt
+- Browser receives update via WebSocket
+- Only that module is replaced in memory
+
+**Tools that support HMR**
+- Parcel (used in Namaste React)
+- Vite (very fast HMR)
+- Webpack
+- Next.js
+
+**HMR vs Live Reload**
+| Feature             | HMR   | Live Reload |
+| ------------------- | ----- | ----------- |
+| Full page reload    | ❌ No  | ✅ Yes       |
+| App state preserved | ✅ Yes | ❌ No        |
+| Faster development  | ✅     | ❌           |
+
+## Q8: What is Parcel Cache?
+
+A: Parcel cache is a hidden folder `(.parcel-cache)` where Parcel stores preprocessed and compiled results of our code so that future builds are much faster.
+
+Simple definition
+
+`👉 Parcel cache saves the work Parcel has already done, so it doesn’t need to redo it every time you run the app.`
+
+**Where is it stored?**
+
+📁 In your project root:
+ ```js
+.parcel-cache/
+```
+
+This folder is auto-created when we run Parcel.
+
+**Why Parcel uses cache?**
+
+Parcel performs heavy tasks like:
+
+- Transpiling JS (JSX → JS)
+- Bundling modules
+- Optimizing assets
+- Dependency resolution
+
+Instead of repeating this work:
+Parcel stores the output in cache. On the next run, it reuses unchanged results
+✅ Result: Faster startup & rebuilds
+
+## Q9: What is dist?
+A: `dist (short for distribution) is a folder that contains the final, production-ready build of your application.`
+
+👉 It is the output folder created by bundlers like Parcel, Vite, Webpack.
+
+Simple definition
+
+`dist = optimized files that the browser actually runs in production`
+
+**What does dist contain?**
+
+After running a build, dist may include:
+
+- Minified JavaScript files
+- Optimized CSS files
+- Bundled assets (images, fonts)
+- Hashed filenames (for caching)
+
+Example:
+```js
+dist/
+ ├── index.html
+ ├── index.8d3f2a.js
+ ├── style.a91c.css
+ └── logo.7bc1.png
+ ```
+
+How is dist created? (Parcel example)
+```js
+npx parcel build index.html
+```
+
+**➡️ Parcel:**
+- Bundles all files
+- Minifies code
+- Optimizes assets
+- Outputs everything into dist/
+
+`dist` vs `.parcel-cache`
+| dist               | .parcel-cache            |
+| ------------------ | ------------------------ |
+| Final output       | Temporary build cache    |
+| Used in production | Used only in development |
+| Can be deployed    | Should NOT be deployed   |
+| Clean, optimized   | Internal, messy          |

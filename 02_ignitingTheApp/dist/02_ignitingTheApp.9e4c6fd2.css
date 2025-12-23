@@ -1,11 +1,7 @@
-#root {
-  background-color: #6495ed;
-  font-style: oblique;
-}
-
 #container {
   text-align: center;
   color: #fff;
+  background-color: #deb887;
   margin-top: 50px;
 }
 

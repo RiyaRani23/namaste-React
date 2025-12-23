@@ -1,3 +1,21 @@
+/* Parcel does many work for us like -
+* HMR - Hot Module Reloading 
+* File Watcher Algorithm - C++
+* BUNDLING
+* MINIFY
+* Cleaning our Code by removing console 
+* Dev and Production Builds
+* Super Fast Build Algorithm
+* Image Optimization
+* Caching while development
+*/ 
+
+
+
+
+import React from "react";
+import ReactDOM from "react-dom/client"; // /client is important here to import
+
 const heading = React.createElement("h1",{
         id : "title"
     },
