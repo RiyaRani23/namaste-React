@@ -19,31 +19,20 @@ Parcel does many work for us like -
 * Transitive Dependencies(used this word during Interview)- If A depends on B and B depends on C , then A transitively depends on C
   {We have our package manager which manages these transitive dependencies for us}
 */ 
-
-
-
-
 import React from "react";
 import ReactDOM from "react-dom/client"; // /client is important here to import
 
-const heading = React.createElement("h1",{
-        id : "title"
-    },
-    "Heading1!");
-
-    const heading2 = React.createElement("h2",
-        {
-            id :"title"
-        },
-        "Heading2!"
+const parent = React.createElement("div",{id:"parent"},
+    React.createElement("div",{id:"child"},
+        [React.createElement("h1",{ key: "h1-child-1" },"I am h1 tag inside child 1"),
+        React.createElement("h2",{key: "h2-child-1"},"I am h2 tag inside child 1")]
+    ),
+    React.createElement("div",{id:"child2"},
+        React.createElement("h1",{key: "h1-child-2"},"I am h1 tag inside child 2"),
+        React.createElement("h2",{key: "h2-child-2"},"I am h2 tag inside child 2")
     )
-
-    const container = React.createElement("div",{
-        id : "container"
-    },
-    {heading, heading2}
-    );
+);
 
     const root = ReactDOM.createRoot(document.getElementById("root"));
     // Render the heading element to the root
-    root.render(container);
+    root.render(parent);
