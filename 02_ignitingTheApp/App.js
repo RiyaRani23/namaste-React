@@ -1,4 +1,6 @@
-/* Parcel does many work for us like -
+/* 
+Parcel does many work for us like -
+* created A Server
 * HMR - Hot Module Replacement 
 * File Watcher Algorithm - C++
 * BUNDLING
@@ -14,8 +16,6 @@
 * manage port Number
 * consistent hashing algorithm
 * Zero Configuration
-*
-*
 * Transitive Dependencies(used this word during Interview)- If A depends on B and B depends on C , then A transitively depends on C
   {We have our package manager which manages these transitive dependencies for us}
 */ 

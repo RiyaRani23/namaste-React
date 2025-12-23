@@ -363,3 +363,89 @@ Example:
 Browserslist answers:
 
 `“Which browsers should my app work on?”`
+
+## Q11. Different types of scripts in HTML
+
+A:In HTML, scripts can be included in different ways and types, depending on when and how JavaScript is executed.
+
+`1️⃣ Normal Script`
+```js
+<script src="app.js"></script>
+```
+**Behavior**
+
+- Blocks HTML parsing
+- Script loads and executes immediately
+- Page rendering waits ❌
+- 📌 Used rarely now
+
+`2️⃣ defer Script (MOST USED ✅)`
+```js
+<script src="app.js" defer></script>
+```
+**Behavior**
+
+- Downloads in parallel
+- Executes after HTML is parsed
+- Maintains order
+- Does NOT block rendering ✅
+
+📌 Best for React & modern apps
+
+`3️⃣ async Script`
+```js
+<script src="analytics.js" async></script>
+```
+
+**Behavior**
+
+- Downloads in parallel
+- Executes as soon as it’s ready
+- Execution order NOT guaranteed
+- Can interrupt HTML parsing ❌
+
+📌 Best for analytics, ads
+
+`4️⃣ Module Script (type="module")`
+```js
+<script type="module" src="app.js"></script>
+```
+**Behavior**
+- Supports import / export
+- Automatically deferred
+- Strict mode by default
+- Used by modern bundlers (React, Parcel, Vite)
+
+📌 This is what Parcel uses internally
+
+`5️⃣ Inline Script`
+```js
+<script>
+  console.log("Hello");
+</script>
+```
+**Behavior**
+
+- Written directly in HTML
+- Blocks parsing
+- Hard to maintain ❌
+
+`6️⃣ No-Script Tag`
+```js
+<noscript>
+  Please enable JavaScript
+</noscript>
+```
+**Purpose**
+
+Shown when JavaScript is disabled
+Accessibility + fallback
+
+`Comparison Table`
+| Type     | Blocks HTML | Order Preserved | Use Case      |
+| -------- | ----------- | --------------- | ------------- |
+| Normal   | ✅ Yes       | ✅               | Rare          |
+| `defer`  | ❌ No        | ✅               | Best practice |
+| `async`  | ❌ Partial   | ❌               | Analytics     |
+| `module` | ❌ No        | ✅               | Modern JS     |
+| Inline   | ✅ Yes       | N/A             | Small scripts |
