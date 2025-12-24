@@ -4,10 +4,16 @@ import ReactDOM from "react-dom/client";
 /*  
 Heading
   - logo
-
+  - Nav Items
 Body
   - search
+  - restaurant list
+    - Restaurant Card
+      - image
+        - name of restaurant,Star Rating,Cuisine,Delivery time
 Footer
+  -Copyright
+  - links   
   - address
   - contact
 */
@@ -15,7 +21,7 @@ const Header = () => {
     return(
         <div className="header">
             <div className="logo-container">
-                  <img className="logo" src="https://play.google.com/store/apps/details?id=com.foodflydeliveryapp" alt = "Logo" />
+                  <img className="logo" src="https://png.pngtree.com/template/20200610/ourmid/pngtree-food-delivery-logo-design-image_381319.jpg" alt = "Logo" />
             </div>
             <div className="nav-items">
                 <ul>
@@ -29,11 +35,27 @@ const Header = () => {
   )
 }
 
+const RestaurantCard = () => {
+    return (
+        <div className="restaurant-card">
+            
+        </div>
+    )
+}
+
+const Body =() => {
+    return (
+    <div className="body">
+     <div className="search">Search</div>
+     <div classsName="restau-container"></div>
+   </div>)
+}
+
 const AppLayout = () =>{
     return(
         <div className='app'>
             <Header/>
-            // Body
+            <Body/>
             // Footer
         </div>
     )
