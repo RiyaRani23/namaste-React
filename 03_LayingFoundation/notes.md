@@ -145,3 +145,5 @@ JSX → Babel (via Parcel) → JavaScript (ECMAScript) → JS Engine → Browser
 
 Important points :-
  `When JSX spans multiple lines, it is wrapped in parentheses() so JavaScript treats it as a single expression and avoids automatic semicolon insertion.`
+
+ ## react element

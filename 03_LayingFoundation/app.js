@@ -6,6 +6,13 @@ import ReactDOM from "react-dom/client";
 // JSX -> Babel transpiles it to React.createElement() -> JS Object -> HTML (DOM)
 
 // React Element
+const heading = (
+    <h1 className="heading" tabIndex="5">
+        Hello from React
+    </h1>
+);
+
+// React Functional Component 
 const Heading = () =>{
     return <h1 className="heading">Hello from react</h1>
 };
