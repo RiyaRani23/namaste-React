@@ -147,3 +147,19 @@ Important points :-
  `When JSX spans multiple lines, it is wrapped in parentheses() so JavaScript treats it as a single expression and avoids automatic semicolon insertion.`
 
  ## react element
+ / React Functional Component 
+ ```js
+const Heading = () =>{
+    return <h1 className="heading">Hello from react</h1>
+};
+```
+`both are same `
+```js
+const HeadingComponent = () => (
+    <h1 className="headng">Hello from react</h1>
+);
+```
+
+`jsx sanitise the data before sending it to browser to prevent from attacks`
+
+same <title /> or <title></><title/> or {title()}
