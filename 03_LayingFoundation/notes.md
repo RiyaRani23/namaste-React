@@ -142,3 +142,6 @@ JSX → Babel (via Parcel) → JavaScript (ECMAScript) → JS Engine → Browser
 | Converts one language to another | Converts same language (JS → JS) |
 | C → Machine code                 | ES6 → ES5                        |
 | Low-level output                 | Human-readable output            |
+
+Important points :-
+ `When JSX spans multiple lines, it is wrapped in parentheses() so JavaScript treats it as a single expression and avoids automatic semicolon insertion.`

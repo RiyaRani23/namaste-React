@@ -1,10 +1,21 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-// JSX (transpiles before it reaches the JS engine) - parcel - babel
+// JSX (babel transpiles before it reaches the JS engine) - parcel - babel
 
-// JSX -> React.createElement() -> JS Object -> HTML (DOM)
-const jsxHeading = <h1 id="title" className="headClass" key="h1tag">Hello from JSX Heading!</h1>;
+// JSX -> Babel transpiles it to React.createElement() -> JS Object -> HTML (DOM)
+
+// React Element
+const Heading = () =>{
+    return <h1 className="heading">Hello from react</h1>
+};
+
+// both are same 
+
+const HeadingComponent = () => (
+    <h1 className="heading">Hello from react</h1>
+);
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(jsxHeading);
+root.render(Heading);
