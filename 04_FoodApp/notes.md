@@ -1,1 +1,2 @@
 ## Functional Component 
+Props
