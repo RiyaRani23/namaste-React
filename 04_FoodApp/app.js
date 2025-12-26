@@ -38,8 +38,17 @@ const Header = () => {
 const RestaurantCard = (props) => {
     const {resData} = props;
 
+    const {
+      cloudinaryImageId,
+      name,
+      cuisines,
+      avgRating,
+      costForTwo,
+      sla: { deliveryTime },
+    } = resData?.card.card.info;
+
     return (
-        <div className="res-card" style={{backgroundColor:"#dbd9d9ff"}}>
+        <div className="res-card" style={{backgroundColor:"#f0ebebff"}}>
             <img 
             className={"res-logo"+"Food"}
              src={
@@ -47,11 +56,11 @@ const RestaurantCard = (props) => {
                   resData.card.card.info.cloudinaryImageId
                 }
              alt="Res-Logo" />
-            <h3>{resData.card.card.info.name}</h3>
-            <h4>{resData.card.card.info.cuisines.join(", ")}</h4>
-            <h4>{resData.card.card.info.avgRating}</h4>
-            <h4> {resData.card.card.info.costForTwo / 100} for two</h4>
-            <h4>{resData.card.card.info.sla.deliveryTime} minutes</h4>
+            <h3>{name}</h3>
+            <h4>{cuisines.join(", ")}</h4>
+            <h4>{avgRating}</h4>
+            <h4> {costForTwo / 100} for two</h4>
+            <h4>{deliveryTime} minutes</h4>
         </div>
     );
 };
@@ -1192,11 +1201,15 @@ const Body =() => {
     <div className="body">
      <div className="search">Search</div>
      <div className="res-container">
-       <RestaurantCard resData={resList[0]} />
-       <RestaurantCard resData={resList[1]} />
-       <RestaurantCard resData={resList[2]} />
-       <RestaurantCard resData={resList[3]} />
-       <RestaurantCard resData={resList[4]} />
+       {
+        resList.map((restaurant) => (
+          <RestaurantCard
+           key={restaurant.card.card.info.id} // always use unique key while using map function
+           resData={restaurant}
+  />
+  // not using keys {not acceptable} <<<<<< index as key <<<<<<<<<<<<<<<<<<<unique id as key
+))
+}
      </div>
    </div>)
 }
@@ -1217,7 +1230,5 @@ const AppLayout = () =>{
         </div>
     )
 }
-        
-
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<AppLayout/>);
