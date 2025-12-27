@@ -56,3 +56,17 @@ Code repetition
 Complex lifecycle methods
 
 Hooks solved all of these.
+
+## React Hooks
+(Normal JS utility functions)
+- useState() - use state
+- useEffect() -
+
+whenever a state variable changes(updates) react rerendered the component
+
+`react is good at dom operation that's why most loved library and fast help of virtual dom`
+
+Reconciliation Algorithm(React Fiber)
+virtual DOM
+Actual DOM
+Diff Alogorithm
