@@ -56,3 +56,22 @@ Unit Test → Testing engine alone
 Integration Test → Engine + gearbox together
 
 E2E Test → Driving the full car on road
+
+## JEST 
+
+`🧪 What is Jest?`
+
+`Jest is a JavaScript testing framework mainly used for`
+- ✅ Unit Testing
+- ✅ Integration Testing
+  (very popular with React)
+
+`🔹 Why Jest?`
+
+- Zero config (works out of the box)
+
+- Fast
+
+- Built-in test runner, assertion library & mocking
+
+- Created by Facebook (Meta)
