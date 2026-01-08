@@ -75,3 +75,10 @@ E2E Test → Driving the full car on road
 - Built-in test runner, assertion library & mocking
 
 - Created by Facebook (Meta)
+
+
+## Steps - Setting up Testing in our app
+- Install React Testing Library
+- Installed jest
+- Installed babelled dependencies
+- Configure Babel
