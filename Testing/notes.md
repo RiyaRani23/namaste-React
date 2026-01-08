@@ -82,3 +82,4 @@ E2E Test → Driving the full car on road
 - Installed jest
 - Installed babelled dependencies
 - Configure Babel
+- Configure Parcel Config file to disable default babel transpilation used by Parcel itself
