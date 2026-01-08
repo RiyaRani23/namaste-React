@@ -24,3 +24,21 @@ useEffect(() => {
 ## always call useState inside functional component
 - try to call useState in top of the functional component
 - never create useState inside if/else or loop or any function statement
+
+## Router
+ two types of routing 
+ - Client Side Routing
+ - Server Side Routing
+
+
+ ## single page website
+
+
+ - Build our Store
+ - Connect our store to our app
+ - Slice (cartSlice)
+ - dispatch
+ - Selector
+
+
+ 
