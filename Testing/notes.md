@@ -83,3 +83,7 @@ E2E Test → Driving the full car on road
 - Installed babelled dependencies
 - Configure Babel
 - Configure Parcel Config file to disable default babel transpilation used by Parcel itself
+- Jest - npx jest --init
+- Install jsdom Library
+
+## __tests__ here __ is `dunder` use as reserve word.
