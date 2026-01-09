@@ -87,6 +87,22 @@ E2E Test → Driving the full car on road
 - Install jsdom Library
 - Include @babel/preset-react - to make JSX work in test cases
 - Include @babel/preset-react inside my babel.config
-- Install @testing-library/jest-dom
+- Install npm i -D @testing-library/jest-dom
 
 ## __tests__ here __ is `dunder` use as reserve word.
+
+## FireEvent
+
+`fireEvent is used to simulate user actions in tests, like:`
+
+- clicking a button
+
+- typing in an input
+
+- submitting a form
+
+- hovering, focusing, etc.
+
+ **It tells React:**
+
+`“Pretend the user did this.”`
